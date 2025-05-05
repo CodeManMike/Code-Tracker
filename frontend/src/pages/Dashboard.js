@@ -35,6 +35,12 @@ const Dashboard = () => {
   const [error, setError] = useState(null);
   const [refreshing, setRefreshing] = useState(false);
 
+  // Move hook calls outside of conditional rendering
+  const statBgColor = useColorModeValue('white', 'gray.700');
+  const statBorderColor = useColorModeValue('gray.200', 'gray.700');
+  const boxBgColor = useColorModeValue('white', 'gray.700');
+  const boxBorderColor = useColorModeValue('gray.200', 'gray.700');
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -112,9 +118,9 @@ const Dashboard = () => {
             py={5}
             shadow="md"
             border="1px"
-            borderColor={useColorModeValue('gray.200', 'gray.700')}
+            borderColor={statBorderColor}
             rounded="lg"
-            bg={useColorModeValue('white', 'gray.700')}
+            bg={statBgColor}
           >
             <StatLabel fontSize="lg">Total Lines Added</StatLabel>
             <StatNumber fontSize="3xl" color="green.500">
@@ -128,9 +134,9 @@ const Dashboard = () => {
             py={5}
             shadow="md"
             border="1px"
-            borderColor={useColorModeValue('gray.200', 'gray.700')}
+            borderColor={statBorderColor}
             rounded="lg"
-            bg={useColorModeValue('white', 'gray.700')}
+            bg={statBgColor}
           >
             <StatLabel fontSize="lg">Total Lines Deleted</StatLabel>
             <StatNumber fontSize="3xl" color="red.500">
@@ -144,9 +150,9 @@ const Dashboard = () => {
             py={5}
             shadow="md"
             border="1px"
-            borderColor={useColorModeValue('gray.200', 'gray.700')}
+            borderColor={statBorderColor}
             rounded="lg"
-            bg={useColorModeValue('white', 'gray.700')}
+            bg={statBgColor}
           >
             <StatLabel fontSize="lg">Total Commits</StatLabel>
             <StatNumber fontSize="3xl" color="blue.500">
@@ -162,9 +168,9 @@ const Dashboard = () => {
         p={5}
         shadow="md"
         border="1px"
-        borderColor={useColorModeValue('gray.200', 'gray.700')}
+        borderColor={boxBorderColor}
         rounded="lg"
-        bg={useColorModeValue('white', 'gray.700')}
+        bg={boxBgColor}
       >
         <Stack direction="row" justifyContent="space-between" mb={4}>
           <Heading as="h2" size="lg">

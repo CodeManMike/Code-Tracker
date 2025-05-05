@@ -9,8 +9,7 @@ import {
   Container,
   SimpleGrid,
   Icon,
-  Flex,
-  useColorModeValue
+  Flex
 } from '@chakra-ui/react';
 import { FaGithub, FaCode, FaChartLine } from 'react-icons/fa';
 

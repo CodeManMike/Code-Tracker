@@ -12,7 +12,8 @@ import { FaGithub } from 'react-icons/fa';
 
 const Login = () => {
   const handleGitHubLogin = () => {
-    window.location.href = '/api/auth/github';
+    // In Docker environment, redirect to the backend service
+    window.location.href = 'http://localhost:5000/api/auth/github';
   };
 
   return (
