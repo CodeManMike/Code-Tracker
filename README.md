@@ -1,5 +1,7 @@
 # GitHub Code Tracker
 
+[![Sponsor CodeManMike](https://img.shields.io/github/sponsors/CodeManMike?label=Sponsor&logo=GitHub&color=db61a2)](https://github.com/sponsors/CodeManMike)
+
 A full-stack web application that tracks how many lines of code you've committed via GitHub. Built using Node.js, React, and MongoDB — all containerized using Docker.
 
 ## Running with Docker
